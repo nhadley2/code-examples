@@ -39,7 +39,7 @@ survival_end_date=min(deathdate, CensorDate);
 
 CensorDate_1Y = med_event + 365 ; * censor at 1 year post-procedure ;
 survival_end_date_1Y=min(deathdate, CensorDate_1Y);
-survmonths_1Y = (survival_end_date_1Y - med_event)/(365.25/12);
+survmonths_1Y = (survival_end_date_1Y - med_event)/(365/12);
 died_1Y=(. lt deathdate le CensorDate_1Y);
 
 CensorDate_3Y = med_event + 1095 ; * censor at 3 years post-procedure ;
